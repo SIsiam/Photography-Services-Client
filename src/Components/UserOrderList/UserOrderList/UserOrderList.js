@@ -1,0 +1,50 @@
+import React, { useContext, useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
+import { UserContext } from '../../../App';
+import SideBar from '../../Admin/SideBar/SideBar';
+import UserOrder from '../UserOrder/UserOrder';
+import './UserOrderList.css'
+
+const ServiceList = () => {
+    const { loggedInUser, newOrder } = useContext(UserContext);
+    const [userEmail, setUserEmail] = useState([]);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/specificOrder?email=${loggedInUser.email}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setUserEmail(data)
+            })
+
+    }, [])
+    return (
+
+        <div className="order-container">
+            <div className="d-flex container-fluid p-3">
+                <h4 style={{ marginLeft: "10vw" }}>Your Order List</h4>
+                <h5 className="ml-auto">{loggedInUser.name}</h5>
+            </div>
+            <SideBar />
+            <div className=" " >
+
+                {
+                    !userEmail.length ?
+                        <p className="text-center">Loading from DataBase please wait... </p>
+                        :
+                        <div className="userOrder-container container" style={{ marginLeft: '23vw', width: '70vw', marginTop: '5%' }}>
+
+                            {
+                                userEmail.map(order => <UserOrder order={order} />)
+                            }
+
+                        </div>
+                }
+
+
+            </div>
+        </div>
+    );
+};
+
+export default ServiceList;
