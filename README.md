@@ -5,21 +5,35 @@
 [Live Website](https://photography-services1.web.app/) |
 [Live API Server](https://damp-fortress-30622.herokuapp.com/)
 
-A Single page web Application with Admin and User Different System. where Admin can Also See User Data And Change The Status.
-Admin Added A Service. Admin Manage A service.
-Admin Make A More Admin With Email Address.
+# Compleate Single page web Application.
 
-User 
-User Can A service Order And See Her Order
-User Can Get A Review For Web
+<li>Admin and User Different System<li>
+
 ### Features
 
+#Admin
+
+ <li> Admin can Also See User Data And Change The Status </li>
+ <li>Admin Added A Service.</li>
+ <li>Admin Can Manage/Delete A service.</li>
+ <li>Admin Make A More Admin With Email Address.</li>
+
+#User
+
+<li>User Can A service Order With Payment</li>
+<li>And See Her Order</li>
+<li>User Get A Review For Website</li>
 
 
 ### Front-end Thechnology : 
 * React.js
-* Bootstrap4
+* Html
 * CSS3
+* Bootstrap5
+* Material ui
+* React Bootrap
+* React Swiper
+* React.js Stripe
 
 ### Back-end Technology
 * Node.js
