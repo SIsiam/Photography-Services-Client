@@ -7,7 +7,6 @@
 
 # Compleate Single page web Application
 
-<li>Admin and User Different System<li>
  
  
 ### Features
