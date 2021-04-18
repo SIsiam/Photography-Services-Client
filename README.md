@@ -6,7 +6,6 @@
 [Live API Server](https://damp-fortress-30622.herokuapp.com/)
 
 # Compleate Single page web Application.
-
 <li>Admin and User Different System<li>
 
 ### Features
