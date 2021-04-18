@@ -6,43 +6,48 @@ import { faFacebookF, faInstagram, faGooglePlusG } from '@fortawesome/free-brand
 
 const Footer = () => {
     const noNamed = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
-        {name: "Tooth Extraction" , link: "/tooth-extract"},
-        {name: "Check Up" , link: "/checkup"},
+        { name: "Wedding template", link: "/Template" },
+        { name: "Event template", link: "/Template" },
+        { name: "Portrait template", link: "/Template" },
+        { name: "Sports template", link: "/Template" },
+        { name: "Sports template", link: "/Template" },
+        { name: "Editorial template", link: "/Template" },
+        { name: "Product template", link: "/Template" },
+        { name: "Architectural template", link: "/Template" },
+        { name: "Fine Art template", link: "/Template" },
+
     ]
     const ourAddress = [
-        {name: "New York - 101010 Hudson" , link: "//google.com/map"},
-        {name: "Yards" , link: "//google.com/map"},
-       
+        { name: "London - 101010 Seabeach", link: "//google.com/map" },
+        { name: "Yards", link: "//google.com/map" },
+
     ]
-    const WeddingPhotoGraphy = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
-        {name: "Tooth Extraction" , link: "/tooth-extract"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"}
+    const Support = [
+        { name: "Help Center", link: "/help-Center" },
+        { name: "Report Spam", link: "/Report-spam" },
+        { name: "Sitemap", link: "/Sitemap" },
+        { name: "Knowledgebase", link: "/knowledgebase" },
+        { name: "Become an author", link: "/author" },
     ]
     const services = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
-        {name: "Tooth Extraction" , link: "/tooth-extract"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"}
+        { name: "Wedding Photography", link: "/Event" },
+        { name: "Event Photography", link: "/Event" },
+        { name: "Portrait Photography", link: "/Event" },
+        { name: "Fashion Photography", link: "/Eventv" },
+        { name: "Sports Photography", link: "/Event" },
+        { name: "Editorial Photography", link: "/Editorial-Photography" },
+        { name: "Product Photography", link: "/Product-Photography" },
+        { name: "Architectural Photography", link: "/Architectural-Photography" },
+        { name: "Fine Art Photography", link: "/Fine-Art-Photography" }
     ]
     return (
         <footer className="footer-area clear-both">
             <div className="container pt-5">
                 <div className="row py-5">
-                    <FooterCol key={1} menuTitle={"."} menuItems={noNamed}/>
-                    <FooterCol key={2} menuTitle="Services" menuItems={services}/>
-                    <FooterCol key={3} menuTitle="WeddingPhotoGraphy" menuItems={WeddingPhotoGraphy}/>
-                    <FooterCol key={4} menuTitle="Our Address" menuItems={ourAddress}> 
+                    <FooterCol key={1} menuTitle={"Products"} menuItems={noNamed} />
+                    <FooterCol key={2} menuTitle="Our Services" menuItems={services} />
+                    <FooterCol key={3} menuTitle="Support" menuItems={Support} />
+                    <FooterCol key={4} menuTitle="Our Address" menuItems={ourAddress}>
                         <ul className="social-media list-inline">
                             <li className="list-inline-item"><a href="//facebook.com"><FontAwesomeIcon className="icon active-icon" icon={faFacebookF} /></a></li>
                             <li className="list-inline-item"><a href="//google.com"><FontAwesomeIcon className="icon" icon={faGooglePlusG} /></a></li>
@@ -50,16 +55,16 @@ const Footer = () => {
                         </ul>
                         <div className="mt-5">
                             <h6>Call now</h6>
-                            <button className="btn btn-brand">+2025550295</button>
+                            <button className="btn btn-brand text-light">+224433356</button>
                         </div>
                     </FooterCol>
                 </div>
-                <div className="copyRight text-center">
-                    <p>Copyright {(new Date()).getFullYear()} All Rights Reserved</p>
+                <div className="copyRight text-center  p-4">
+                    <p>&#169; Copyright Author siam {(new Date()).getFullYear()} All Rights Reserved</p>
                 </div>
             </div>
         </footer>
-        
+
     );
 };
 

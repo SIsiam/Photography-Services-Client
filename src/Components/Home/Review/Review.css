@@ -1,0 +1,6 @@
+.effect :hover{
+    background-color: #9c78db;
+    cursor: pointer;
+    transition: all 0.5s linear;
+    color: white;
+}

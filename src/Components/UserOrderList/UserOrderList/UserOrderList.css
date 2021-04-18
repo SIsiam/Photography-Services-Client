@@ -7,10 +7,11 @@
     padding: 10px;
     grid-gap: 5px;
 }
-.order-container{
-    background: url('../../../images/london-eye-3790187_1920.jpg') center/cover;
-    height: auto;
-    font-weight: 700;
-    position: relative;
-    color: white;
-}
+
+@media all and (max-width: 480px) {
+    .my-order {
+        display: none;
+        }
+  
+  }
+  

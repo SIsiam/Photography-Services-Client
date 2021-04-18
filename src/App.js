@@ -45,7 +45,7 @@ function App() {
             <Orders />
           </PrivateRoute>
 
-          <PrivateRoute path="/ServiceList">
+          <PrivateRoute path="/orderList">
             <UserOrderList />
           </PrivateRoute>
 

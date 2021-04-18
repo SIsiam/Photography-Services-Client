@@ -8,14 +8,12 @@ import './Order.css'
 
 const Order = () => {
     const { id } = useParams();
-
+    document.title = "Photography Services - Orders";
     const { loggedInUser, newOrder, setNewOrder } = useContext(UserContext);
-    // const { register, handleSubmit, errors } = useForm();
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const history = useHistory();
     const [serviceData, setServiceData] = useState(null);
-
 
 
     const onSubmit = (data) => {
@@ -40,7 +38,7 @@ const Order = () => {
 
 
 
-        fetch('http://localhost:5000/placeOrder', {
+        fetch('https://damp-fortress-30622.herokuapp.com/placeOrder', {
             method: 'POST',
             body: formData
         })
@@ -48,8 +46,8 @@ const Order = () => {
             .then(result => {
                 console.log(result);
                 if (result) {
-                    alert('Data has been send')
-                    history.replace('/ServiceList')
+                    alert('Your Order Has been send SuccesFully')
+                    history.replace('/orderList')
                 }
             })
             .catch(err => console.log(err))
@@ -58,7 +56,7 @@ const Order = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/order/${id}`)
+        fetch(`https://damp-fortress-30622.herokuapp.com/order/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -69,16 +67,16 @@ const Order = () => {
 
     return (
         <div className="order-container">
-            <div className="d-flex container-fluid p-3">
+            <div className="d-flex container-fluid p-3 order-container-sidebar">
                 <SideBar />
-                <h4 className="ml-auto">{loggedInUser.name}</h4>
+                <h4 className="ml-auto text-light"> Welcome {loggedInUser.name}</h4>
             </div>
 
-            <div className="container container-fluid" style={{ top: "0%", margin: '200px' }} >
-                <h2 style={{ marginLeft: "10vw" }}>Order</h2>
-                <div className="row">
+            <div className="container container-fluid" >
+                <h2 style={{ marginLeft: "20vw" }} className="text-light">Order</h2>
+                <div className="row ">
 
-                    <div style={{ display: serviceData ? 'none' : 'block' }} className="col-md-6">
+                    <div style={{ display: serviceData ? 'none' : 'block' }} className="col-md-6 m-5">
 
                         <form onSubmit={handleSubmit(onSubmit)} >
                             <div className="form-group">
@@ -108,9 +106,10 @@ const Order = () => {
 
                 <div className="row">
 
-                    <div style={{ display: serviceData ? 'block' : 'none' }} className="col-md-6">
-                        <p> You Wil Be Charged {newOrder.price}   </p>
-                        <p> Don't Warry This Is Just Test use 42424242424242 1231232132</p>
+                    <div style={{ display: serviceData ? 'block' : 'none' }} className="col-md-6 m-5 text-light">
+                        <h4> {newOrder.name} Wil Be Charged {newOrder.price} Per Day   </h4>
+                        <br />
+                        <p> Don't Worry This Is Just Test Porpuse. Use 42424242424242 12/312/32132</p>
                         <br />
                         <PaymentProcess handlePayment={paymentSuccess} />
                     </div>

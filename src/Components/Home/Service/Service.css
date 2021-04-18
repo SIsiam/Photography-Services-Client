@@ -1,5 +1,5 @@
 .service{
-    transition: .6s;
+    transition: .8s;
     margin-bottom: 30px;
 }
 .service-img {
@@ -10,6 +10,6 @@
 }
 .service:hover{
     transform: scale(1.1);
-    box-shadow: 10px 10px 15px gray;
+    box-shadow: 10px 15px 25px rgb(248, 5, 46);
     background-color: white;
 }

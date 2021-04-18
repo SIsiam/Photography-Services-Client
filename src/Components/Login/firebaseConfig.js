@@ -1,9 +1,9 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyAKfNYBq7IgfrsT-oiVGWpKQDne4a1qdd8",
-  authDomain: "burj-khalifa-hotel.firebaseapp.com",
-  projectId: "burj-khalifa-hotel",
-  storageBucket: "burj-khalifa-hotel.appspot.com",
-  messagingSenderId: "598715886704",
-  appId: "1:598715886704:web:9d7b56dfbbc1030750d8b5"
+  apiKey: "AIzaSyD2LNBwzVTzTkknj38D4nofxCk73-FEGzo",
+  authDomain: "photography-services1.firebaseapp.com",
+  projectId: "photography-services1",
+  storageBucket: "photography-services1.appspot.com",
+  messagingSenderId: "278966950728",
+  appId: "1:278966950728:web:16e688febce5c8f7a9717d"
 };
 export default firebaseConfig;

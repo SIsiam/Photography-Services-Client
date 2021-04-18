@@ -1,13 +1,23 @@
-.bg{    
-        background-color: #62fbcd ;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 93%);
+.header-container{    
+    background: radial-gradient(65% 100% at 50% 0%, #18005B 0%, #000000 100%), radial-gradient(circle at 30% 45%, #FF0000 0%, #FF0000 5%, #FFFF00 5%, #FFFF00 10%, #00FF00 10%, #00FF00 15%, #00FFFF 15%, #00FFFF 20%, #0000FF 20%, #0000FF 30%, #FF00FF 30%, #FF00FF 40%, #FF0000 40%), radial-gradient(circle at 50% 0%, #FF0000 0%, #FF0000 5%, #FFFF00 5%, #FFFF00 10%, #00FF00 10%, #00FF00 20%, #00FFFF 20%, #00FFFF 30%, #0000FF 30%, #0000FF 40%, #FF00FF 40%, #FF00FF 50%, #FF0000 50%), conic-gradient(from 15deg at 20% 420%, #FF0000 0deg, #FF0000 55deg, #FFFF00 60deg, #FFFF00 120deg, #00FF00 120deg, #00FF00 180deg, #00FFFF 180deg, #00FFFF 240deg, #0000FF 240deg, #0000FF 300deg, #FF00FF 310deg, #FF00FF 360deg, #FF0000 360deg);
+background-blend-mode: screen, multiply, multiply, normal;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 88%);
+        color: white;
+        font-weight: 500;
+        border-radius: 10px;
+        margin-top: 20px;
 }
 
-
-    h1 {
-        color: white;
-        padding-left: 10px;
+@media screen and (max-width: 580px) {
+    .bg {
+        background-color: #eb710d ;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
+    .bg img {
+        width: 280px;
+    }
+  }
+
 
     #hover {
         color: rgba(158, 78, 255, 0.9);
@@ -33,7 +43,7 @@
         position: relative;
         text-align: center;
         box-shadow: 1px 1px 2px #e6e6e6;
-        cursor: default;
+        cursor: grab;
     }
 
     .view .mask,
@@ -91,14 +101,14 @@
     }
 
     .view-second .mask {
-        background-color: rgba(255, 20, 216, 0.6);
-        width: 300px;
+        background-color: rgba(255, 20, 130, 0.6);
+        width: 380px;
         padding: 105px;
-        height: 200px;
+        height: 280px;
         opacity: 0;
         transform: translate(265px, 145px) rotate(45deg);
         -webkit-transform: translate(265px, 145px) rotate(45deg);
-        transition: all 0.5s ease-in-out;
+        transition: all 0.8s ease-in-out;
     }
 
     .view-second h2 {

@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
 import { UserContext } from '../../../App';
 import SideBar from '../../Admin/SideBar/SideBar';
 import UserOrder from '../UserOrder/UserOrder';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import './UserOrderList.css'
 
 const ServiceList = () => {
@@ -10,7 +10,7 @@ const ServiceList = () => {
     const [userEmail, setUserEmail] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/specificOrder?email=${loggedInUser.email}`)
+        fetch(`https://damp-fortress-30622.herokuapp.com/specificOrder?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -21,18 +21,20 @@ const ServiceList = () => {
     return (
 
         <div className="order-container">
-            <div className="d-flex container-fluid p-3">
-                <h4 style={{ marginLeft: "10vw" }}>Your Order List</h4>
+            <div className="d-flex container-fluid p-3 my-order">
+            <SideBar />
+                <h4 className="text-center">Your Order List</h4>
                 <h5 className="ml-auto">{loggedInUser.name}</h5>
             </div>
-            <SideBar />
-            <div className=" " >
+            <div>
 
                 {
-                    !userEmail.length ?
-                        <p className="text-center">Loading from DataBase please wait... </p>
+                    !userEmail.length ? <div className="text-center" >
+
+                        <h3 className="text-warning" >Loading please wait.. <CircularProgress color="secondary" /> </h3>
+                    </div>
                         :
-                        <div className="userOrder-container container" style={{ marginLeft: '23vw', width: '70vw', marginTop: '5%' }}>
+                        <div className="userOrder-container container" style={{ width: '70vw', marginTop: '5%' }}>
 
                             {
                                 userEmail.map(order => <UserOrder order={order} />)

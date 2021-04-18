@@ -1,24 +1,33 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
 import 'swiper/swiper-bundle.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import carousel1 from '../../../images/carousel-1.png';
-import carousel2 from '../../../images/carousel-2.png';
-import carousel3 from '../../../images/carousel-3.png';
-import carousel4 from '../../../images/carousel-4.png';
-import carousel5 from '../../../images/carousel-5.png';
-import './LatestWork.css';
+
+import swiperImg1 from "../../../images/template1.jpg";
+import swiperImg2 from "../../../images/template-4.png";
+import swiperImg3 from "../../../images/template-6.jpg";
+import swiperImg4 from "../../../images/template-11.jpg";
+import swiperImg5 from "../../../images/template-10.jpg";
+import swiperImg6 from "../../../images/template-main.jpg";
+import swiperImg7 from "../../../images/template-main2.jpg";
+import swiperImg8 from "../../../images/template-main3.jpg";
+import swiperImg9 from "../../../images/templatemain-4.jpg";
+
 
 const LatestWork = () => {
+
   // var swiper = new Swiper('.swiper-container', {
   //   pagination: {
   //     el: '.swiper-pagination',
   //   },
   // });
+
   return (
-    <div className="carousel-bakground">
-      <h2 className="mb-5 text-center text-success">OUR LATEST WORK </h2>
-      <div className=" container container-fluid mt-5 p-5 carousel">
+    <div style={{
+      backgroundImage: "linear-gradient(65deg, rgb(7, 26, 82) 3%, rgb(7, 26, 82) 40%, rgb(8, 105, 114) calc(40% + 1px), rgb(8, 105, 114) 60%, rgb(23, 185, 120) calc(60% + 1px), rgb(23, 185, 120) 68%, rgb(167, 255, 131) calc(68% + 1px), rgb(167, 255, 131) 100%)", borderRadius: '20px', cursor: 'grab'
+    }} className="p-2">
+      <h5 className="text-center p-2" style={{ color: 'rgb(167, 255, 131)' }}>OUR PORTFOLIO <strong classNama="text-success"> ___</strong></h5>
+      <h2 className="text-center mt-3"> <strong style={{ color: 'rgb(167, 255, 131)' }}>Latest Project</strong> </h2>
+      <div className=" container container-fluid mt-5 p-3 carousel">
         <Swiper
           spaceBetween={30}
           slidesPerView={3}
@@ -26,11 +35,43 @@ const LatestWork = () => {
             console.log('slide change')
           }
         >
-          <SwiperSlide><img className="img-fluid" src={carousel1} style={{ width: '20vw', height: '35vh' }} alt="" /></SwiperSlide>
-          <SwiperSlide><img className="img-fluid" src={carousel2} style={{ width: '20vw', height: '35vh' }} alt="" /></SwiperSlide>
-          <SwiperSlide><img className="img-fluid" src={carousel3} style={{ width: '20vw', height: '35vh' }} alt="" /></SwiperSlide>
-          <SwiperSlide><img className="img-fluid" src={carousel4} style={{ width: '20vw', height: '35vh' }} alt="" /></SwiperSlide>
-          <SwiperSlide><img className="img-fluid" src={carousel5} style={{ width: '20vw', height: '35vh' }} alt="" /></SwiperSlide>
+          <SwiperSlide>
+            <img className="img-fluid" src={swiperImg1} style={{ width: 'auto', height: 'auto', }} alt="" />
+          </SwiperSlide>
+
+
+          <SwiperSlide>
+            <img className="img-fluid" src={swiperImg2} style={{ width: 'auto', height: 'auto' }} alt="" />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img className="img-fluid" src={swiperImg3} style={{ width: 'auto', height: 'auto' }} alt="" />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img className="img-fluid" src={swiperImg4} style={{ width: 'auto', height: 'auto' }} alt="" />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img className="img-fluid" src={swiperImg5} style={{ width: 'auto', height: 'auto' }} alt="" />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img className="img-fluid" src={swiperImg6} style={{ width: 'auto', height: 'auto' }} alt="" />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img className="img-fluid" src={swiperImg7} style={{ width: 'auto', height: 'auto' }} alt="" />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img className="img-fluid" src={swiperImg8} style={{ width: 'auto', height: 'auto' }} alt="" />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img className="img-fluid" src={swiperImg9} style={{ width: 'auto', height: 'auto' }} alt="" />
+          </SwiperSlide>
+
         </Swiper>
 
       </div>

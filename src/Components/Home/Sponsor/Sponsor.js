@@ -5,8 +5,8 @@ const Sponsor = ({ sponsor }) => {
     console.log(sponsor);
     return (
         <div className="my-sponsor">
-            <div>
-                <img style={{ width: '15vw', height: '10vh', }} src={sponsor.img} className="m-5" alt="sponsors logo" />
+            <div className="my-sponsor-img">
+                <img style={{ width: '180px', height: '130px',borderRadius:'10px' }} src={sponsor.img} className="m-5 img-fluid" alt="sponsors logo" />
             </div>
         </div>
     );

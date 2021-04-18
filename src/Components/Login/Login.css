@@ -1,5 +1,5 @@
 .login-form{
-    background: url('../../images/the-eye-664037_1280.jpg') center/cover;
+    background: url('../../images/london-eye-3790187_1920.jpg') center/cover;
     height: 100vh;
     font-weight: 700;
     position: relative;
@@ -7,14 +7,13 @@
 }
 
 .btn-social {
-    width: 50%;
+    width: 45%;
     height: 55px;
     border-radius: 20px;
     position: relative;
     margin-top: 200px;
-    /* background-color: gainsboro; */
-    background-color: #905af5;
-    color: black;
+    background-color: #833a37;
+    color: white;
     border: 2px solid rgb(255, 255, 255);
     transition: border-color .8s ease, background-color .9s ease;
     z-index: 10;

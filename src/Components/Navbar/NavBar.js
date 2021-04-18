@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-// import logo from '../../images/logos';
+import logo from '../../images/logo1.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
-import './Navbar.css'
 
 const NavBar = () => {
 
@@ -19,118 +18,48 @@ const NavBar = () => {
         })
     }, []);
     return (
-        // my nav 
 
-        // <nav style={{ backgroundColor: '#FBD062' }} className="navbar navbar-expand-lg navbar-light offset-md-1">
-        //     <img style={{ width: '15%' }} className="navbar-brand img-fluid" src={logo} alt="Logo" />
+        <div className="container">
+            <nav className={(isSticky || isCollapsed) ? "slide in show shadow-sm navbar navbar-expand-sm bg-white navbar-light py-1  fixed-top" : "slide out show navbar navbar-expand-sm navbar-light "}>
+                <Link className="" to="/home">
+                    <img src={logo} style={{ width: '120px' }} alt="" />
+                </Link>
+                <div className="container">
+                    <button onClick={
+                        () => setCollapsed(!isCollapsed ? 'show' : null)} className="navbar-toggler d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className={`collapse navbar-collapse ${isCollapsed}`} id="collapsibleNavId">
 
-        //     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        //         <span className="navbar-toggler-icon"></span>
-        //     </button>
+                        <ul className="navbar-nav ml-auto">
 
-
-
-        //     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        // <ul className="navbar-nav ml-auto">
-
-        //     <li className="nav-item active">
-        //         <Link to="/home" className="nav-link mr-5 font-weight-bold" href="#">Home <span className="sr-only">(current)</span></Link>
-        //     </li>
-
-        //     <li className="nav-item">
-        //         <a className="nav-link mr-5 font-weight-bold" href="#">Our Portfolio</a>
-        //     </li>
+                            <li className="nav-item active">
+                                <Link to="/home" className="nav-link mr-5 font-weight-bold">Home </Link>
+                            </li>
 
 
-        //     <li className="nav-item">
-        //         <Link to="/AdminSevice" className="nav-link mr-5 font-weight-bold">Admin</Link>
-        //     </li>
+                            <li className="nav-item">
+                                <Link to="/orderList" className="nav-link mr-5 font-weight-bold">Order List</Link>
+                            </li>
 
-        //     <li className="nav-item">
-        //         <Link to="/login"> <button type="button" className=" mr-5 font-weight-bold btn btn-dark btn-lg">Login</button></Link>
-        //     </li>
-        // </ul>
-        //     </div>
-        // </nav>
+                            <li className="nav-item">
+                                <a className="nav-link mr-5 font-weight-bold" href="#contactUs">Contact Us</a>
+                            </li>
 
+                            <li className="nav-item">
+                                <Link to="/AdminSevice"> <button type="button" className=" mr-5 font-weight-bold btn btn-danger btn-lg">Admin</button>
+                                </Link>
+                            </li>
 
+                            <li className="nav-item">
+                                <Link to="/login"> <button type="button" className=" mr-5 font-weight-bold btn btn-warning btn-lg">Login</button></Link>
+                            </li>
+                        </ul>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div className="container">
-        <nav className={(isSticky || isCollapsed) ? "slide in show shadow-sm navbar navbar-expand-sm bg-white navbar-light py-3  fixed-top" : "slide out show navbar navbar-expand-sm navbar-light   "}>
-            {/* navbar-light py-4 fixed-top */}
-
-            <div className="container mb-5">
-                {/* <img style={{ width: '5%',}} className="navbar-brand img-fluid" src={logo} alt="Logo" /> */}
-
-                <button onClick={
-                    () => setCollapsed(!isCollapsed ? 'show' : null)} className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className={`collapse navbar-collapse ${isCollapsed}`} id="collapsibleNavId">
-
-                    <ul className="navbar-nav ml-auto">
-
-                        <li className="nav-item active">
-                            <Link to="/home" className="nav-link mr-5 font-weight-bold" href="#">Home </Link>
-                        </li>
-
-                        <li className="nav-item">
-                            <a className="nav-link mr-5 font-weight-bold" href="#">Our Portfolio</a>
-                        </li>
-
-                        <li className="nav-item">
-                            <Link to="/serviceList" className="nav-link mr-5 font-weight-bold">Order List</Link>
-                        </li>
-
-
-                        <li className="nav-item">
-                            <Link to="/AdminSevice" className="nav-link mr-5 font-weight-bold">Admin</Link>
-                        </li>
-
-                        <li className="nav-item">
-                            <Link to="/login"> <button type="button" className=" mr-5 font-weight-bold btn btn-dark btn-lg">Login</button></Link>
-                        </li>
-                    </ul>
-
-
-                    {/* 
-                    <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-                        <li className="nav-item active">
-                            <Link className="nav-link" to="/">Home</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/about">About Us</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/doctor">Doctor Dashboard</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/blog">Blog</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/contact">Contact Us</Link>
-                        </li>
-                    </ul> */}
-
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
         </div>
 
     );
