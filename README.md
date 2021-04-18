@@ -2,8 +2,7 @@
 
 
 
-<h3>[Live Website](https://photography-services1.web.app/)</h3>
-[Live API Server](https://damp-fortress-30622.herokuapp.com/)
+
 
 # Compleate Single page web Application
 
