@@ -1,10 +1,17 @@
-# Doctor's Portal
+# Photography Services
 
-A Single page web app with dashboard  where people can pick the date and time and fix an appointment. A doctor can review his appointments and prescribe medicine to a Patient from his dashboard.
+
 
 [Live Website](https://photography-services1.web.app/) |
 [Live API Server](https://damp-fortress-30622.herokuapp.com/)
 
+A Single page web Application with Admin and User Different System. where Admin can Also See User Data And Change The Status.
+Admin Added A Service. Admin Manage A service.
+Admin Make A More Admin With Email Address.
+
+User 
+User Can A service Order And See Her Order
+User Can Get A Review For Web
 ### Features
 
 
