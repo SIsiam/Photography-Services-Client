@@ -7,7 +7,7 @@
 
 # Compleate Single page web Application
 
-<li>Admin and User Different System<li>
+<li>Admin and User Different System</li>
  
 ### Features
 
@@ -18,7 +18,7 @@
  <li>Admin Can Manage/Delete A service.</li>
  <li>Admin Make A More Admin With Email Address.</li>
 
-#User
+### User
 
 <li>User Can A service Order With Payment</li>
 <li>And See Her Order</li>
