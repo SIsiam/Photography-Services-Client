@@ -5,7 +5,7 @@
 [Live API Server](https://damp-fortress-30622.herokuapp.com/)
 
 
-# Compleate Single page web Application
+# Complete Single page web Application
 
 <li>Admin and User Different System</li>
  
@@ -13,7 +13,7 @@
 
 ### Admin
 
- <li> Admin can Also See User Data And Change The Status </li>
+ <li>Admin can Also See User Data And Change The Status </li>
  <li>Admin Added A Service.</li>
  <li>Admin Can Manage/Delete A service.</li>
  <li>Admin Make A More Admin With Email Address.</li>
@@ -25,7 +25,7 @@
 <li>User Get A Review For Website</li>
 
 
-### Front-end Thechnology : 
+### Front-end Technology : 
 * React.js
 * Html
 * CSS3
@@ -35,7 +35,7 @@
 * React Swiper
 * React.js Stripe
 
-### Back-end Technology
+### Back-end Technology :
 * Node.js
 * Express.js
 * MongoDB
